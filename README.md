@@ -82,7 +82,7 @@ git push -u origin main
 
 ## 部署狀態
 
-- GitHub Repository：尚未建立，部署後填入。
-- GitHub Pages：尚未啟用，部署後填入。
+- GitHub Repository：https://github.com/junyao-li/snowmate-notebook
+- GitHub Pages：https://junyao-li.github.io/snowmate-notebook/
 
 本文件不會聲稱尚未完成的部署。

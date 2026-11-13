@@ -16,17 +16,17 @@
 
 ## 2. GitHub Repository 連結
 
-【待填：實際 GitHub Repository URL】
+https://github.com/junyao-li/snowmate-notebook
 
 ## 3. 網頁連結
 
-【待填：實際 GitHub Pages URL】
+https://junyao-li.github.io/snowmate-notebook/
 
 ## 4. AGENTS.md
 
 Repository 根目錄包含完整 `AGENTS.md`：
 
-【待填：實際 AGENTS.md GitHub URL】
+https://github.com/junyao-li/snowmate-notebook/blob/main/AGENTS.md
 
 規則內容包含：
 
