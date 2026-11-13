@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="以固定成本、按人按日成本與官方確認清單規劃滑雪旅行，並用互動工具試算總額與每人預算。">
+  <meta name="theme-color" content="#f7fbff">
+  <title>滑雪行程規劃｜SnowMate 滑雪新手筆記</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/site.js" defer></script>
+</head>
+<body data-root=".." data-page="trip-planning">
+  <div data-site-header></div>
+
+  <main id="main-content">
+    <header class="topic-hero">
+      <div class="container topic-hero-grid">
+        <div>
+          <p class="eyebrow">Route 04 · SOP Extension Example</p>
+          <h1>滑雪行程<br><span>規劃方法</span></h1>
+          <p class="topic-summary">這一頁依 AGENTS.md 的新增頁面 SOP 製作：先拆分固定與按日成本，再建立官方確認順序，避免把試算當成即時報價。</p>
+        </div>
+        <aside class="learning-box" aria-label="本篇學習目標">
+          <h2>讀完你會知道</h2>
+          <ul>
+            <li>如何拆分旅程費用</li>
+            <li>哪些項目適合先預留緩衝</li>
+            <li>試算後仍要確認哪些官方資訊</li>
+          </ul>
+        </aside>
+      </div>
+    </header>
+
+    <div class="scope-wrap">
+      <div class="container scope-note">
+        <strong>適用範圍</strong>
+        <p>本頁試算只使用你輸入的假設金額，不連接即時票價、匯率、天氣、交通或訂房系統，也不提供保險與金融建議。</p>
+      </div>
+    </div>
+
+    <div class="topic-main">
+      <div class="container topic-layout">
+        <nav class="toc" aria-label="本頁目錄">
+          <strong>本頁目錄</strong>
+          <ol>
+            <li><a href="#situation">常見情境</a></li>
+            <li><a href="#checklist">規劃與試算</a></li>
+            <li><a href="#boundaries">資料邊界</a></li>
+            <li><a href="#check">自我檢查</a></li>
+          </ol>
+        </nav>
+
+        <article class="article">
+          <section id="situation">
+            <span class="section-number">01 · SITUATION</span>
+            <h2>總額不是把看到的價格隨便相加</h2>
+            <p class="lead-sentence">先分清楚「整團一次支付」和「每人每天發生」，才能避免把住宿、交通或租借重複計算。</p>
+            <p>例如住宿與包車可能是整團總額，雪票、租借與餐費則常隨人數與天數增加。把費用類型分開，之後換人數或天數時才容易調整。</p>
+            <div class="diagram">
+              <div class="flow-diagram" aria-label="旅程費用由按人按日成本與整團固定成本組成">
+                <div class="flow-node">人 × 日<br><small>雪票、租借、餐費</small></div>
+                <span class="flow-arrow" aria-hidden="true">＋</span>
+                <div class="flow-node accent">整團固定<br><small>住宿、交通</small></div>
+                <span class="flow-arrow" aria-hidden="true">＝</span>
+                <div class="flow-node patrol">旅程總額<br><small>再留緩衝</small></div>
+              </div>
+              <p class="diagram-caption">這是試算結構，不代表每個供應商都採相同計價方式；請以實際報價條款為準。</p>
+            </div>
+            <div class="key-takeaway">
+              <strong>預算是一個可以更新的模型</strong>
+              <p>先寫假設與來源，再隨官方報價更新。不要把最早查到的數字當成最後金額，也不要忘記取消、行李與交通銜接等條件。</p>
+            </div>
+          </section>
+
+          <section id="checklist">
+            <span class="section-number">02 · CHECKLIST</span>
+            <h2>用自己的假設做一次試算</h2>
+            <p>下方預設值只是示範，不是報價。輸入你實際查到的同一幣別金額；若不同幣別，請先用同一個明確日期的匯率自行換算並記錄。</p>
+            <div class="budget-lab" data-budget-lab>
+              <div>
+                <h3>滑雪旅程預算小工具</h3>
+                <div class="budget-fields">
+                  <div class="budget-field"><label for="people">人數</label><input id="people" name="people" type="number" min="1" value="3"></div>
+                  <div class="budget-field"><label for="days">滑雪天數</label><input id="days" name="days" type="number" min="1" value="4"></div>
+                  <div class="budget-field"><label for="lift">每人每日雪票（TWD）</label><input id="lift" name="lift" type="number" min="0" value="1800"></div>
+                  <div class="budget-field"><label for="rental">每人每日租借（TWD）</label><input id="rental" name="rental" type="number" min="0" value="1500"></div>
+                  <div class="budget-field"><label for="food">每人每日餐費（TWD）</label><input id="food" name="food" type="number" min="0" value="1000"></div>
+                  <div class="budget-field"><label for="lodging">住宿整團總額（TWD）</label><input id="lodging" name="lodging" type="number" min="0" value="24000"></div>
+                  <div class="budget-field"><label for="transport">交通整團總額（TWD）</label><input id="transport" name="transport" type="number" min="0" value="9000"></div>
+                </div>
+              </div>
+              <div class="budget-output" aria-live="polite">
+                <div><span>旅程總額</span><strong data-total>NT$84,600</strong><span>平均每人</span><strong data-per-person>NT$28,200</strong></div>
+              </div>
+            </div>
+
+            <h3>從候選行程到可執行版本</h3>
+            <ol class="rule-list">
+              <li><strong>固定基本資料。</strong>確認人數、滑雪日、住宿夜數、單板／雙板、程度與租借需求。</li>
+              <li><strong>把費用標成計價單位。</strong>每人、每人每日、每房每晚或整團總額要清楚分開。</li>
+              <li><strong>記錄來源與查詢日期。</strong>同一張表放官方網址、幣別、是否含稅與取消條款。</li>
+              <li><strong>保留變動與備案。</strong>為交通、天候、裝備、行李與臨時調整留下時間和預算空間。</li>
+            </ol>
+            <div class="safety-note">
+              <strong>不要為了追行程忽略停止條件</strong>
+              <p>天候惡化、官方關閉區域、身體不適或能力不足時，取消或調整比完成原計畫更重要。</p>
+            </div>
+          </section>
+
+          <section id="boundaries">
+            <span class="section-number">03 · BOUNDARIES</span>
+            <h2>試算不是預訂，也不是即時報價</h2>
+            <div class="comparison-table">
+              <table>
+                <thead><tr><th>項目</th><th>本頁能做</th><th>出發前要去哪裡確認</th></tr></thead>
+                <tbody>
+                  <tr><td>預算</td><td>依輸入假設計算總額與每人金額</td><td>住宿、交通、雪場、租借與付款頁面</td></tr>
+                  <tr><td>天氣與雪況</td><td>提醒納入行程彈性</td><td>官方天氣、雪場公告與現場資訊</td></tr>
+                  <tr><td>交通</td><td>提醒分辨固定與按人費用</td><td>交通業者時刻、預約、行李與道路資訊</td></tr>
+                  <tr><td>安全</td><td>提供停止與求助原則</td><td>雪場巡邏、工作人員、教練與當地專業單位</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>若需要比較方案，建議保留「基本方案」與「天候／交通變動方案」，而不是只做一條沒有替代路徑的完美行程。</p>
+            <div class="safety-note">
+              <strong>Backcountry 不在本規劃範圍</strong>
+              <p>本頁面向一般雪場行程，不規劃場外滑行。日本官方旅遊資訊建議一般旅客留在邊界內；場外活動需要不同的能力、裝備、即時資訊與專業嚮導評估。</p>
+            </div>
+          </section>
+
+          <section id="check">
+            <span class="section-number">04 · CHECK</span>
+            <h2>自我檢查</h2>
+            <div class="check-list">
+              <details><summary>1. 為什麼住宿整團總額不能再乘一次人數？</summary><p>如果輸入已是整團總額，再乘人數會重複計算。每筆費用都要先標清楚計價單位。</p></details>
+              <details><summary>2. 預算工具算出金額後，為什麼還不能直接訂行程？</summary><p>工具只依輸入假設運算，不知道實際稅費、取消條款、匯率、庫存或即時價格。仍要在官方或供應商頁面確認。</p></details>
+              <details><summary>3. 行程為什麼要保留替代方案？</summary><p>冬季天候、道路、交通與雪場營運可能改變。替代方案讓你能在安全與官方限制下調整，而不是被迫追原計畫。</p></details>
+            </div>
+
+            <h3>這一頁如何證明可擴充？</h3>
+            <p>本頁從共用模板建立，沿用情境、檢查表、邊界、自我檢查、來源與前後頁結構；同時在共用導覽與首頁新增入口。完整紀錄請見 `EXTENSION_EXAMPLE.md`。</p>
+            <h3>來源與下一步</h3>
+            <ul class="sources-list">
+              <li><a href="https://www.japan.travel/en/japan-safe-travel-information/" target="_blank" rel="noopener">JNTO Japan Safe Travel Information</a>：出發前查看日本官方安全與災害資訊入口。</li>
+              <li><a href="https://www.japan.travel/en/responsible-travel-guide/enjoying-nature-responsibly/" target="_blank" rel="noopener">JNTO Responsible Travel Guide</a>：冬季活動、雪場邊界與山區條件提醒。</li>
+            </ul>
+          </section>
+
+          <nav class="lesson-nav" aria-label="內容前後頁">
+            <a href="japan-resort-planning.html"><small>上一篇</small><strong>← 選擇雪場</strong></a>
+            <a class="home-link" href="../index.html#topics"><small>全部內容</small><strong>四條路線</strong></a>
+            <a class="next-link" href="../AGENTS.md"><small>繼續延伸</small><strong>查看新增頁面 SOP →</strong></a>
+          </nav>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <div data-site-footer></div>
+</body>
+</html>
