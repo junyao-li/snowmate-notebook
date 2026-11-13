@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#112e35">
+  <meta name="description" content="Snowboard 101｜依據六份可信來源與 LLM Wiki 製作的初學者單板滑雪教學簡報。">
+  <title>Snowboard 101｜從零開始學單板滑雪</title>
+  <style>:root{--ink:#153a41;--deep:#102e36;--pine:#184a50;--teal:#268276;--mint:#d7ece4;--sand:#f6f2e9;--cream:#fdfaf3;--orange:#e9935f;--line:#e2e5df;--muted:#607579;--shadow:0 18px 48px rgba(14,49,52,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#e9ece6;font-family:ui-sans-serif,system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.55}button,a{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #f1ad79;outline-offset:3px}a{color:var(--teal)}[hidden]{display:none!important}.skip-link{position:absolute;top:-100px;left:20px;z-index:500;background:#fff;padding:12px}.skip-link:focus{top:12px}
+.app{display:flex;width:min(1600px,100%);min-height:100vh;margin:auto;background:#eff2ec}.sidebar{width:270px;flex:0 0 270px;background:var(--deep);color:#e4f2eb;min-height:100vh;display:flex;flex-direction:column;padding:28px 17px 21px;position:sticky;top:0;height:100vh;overflow-y:auto}.sidebar-top{display:flex;align-items:center;gap:11px;padding:7px 8px 34px}.sidebar-top strong{font-size:14px;white-space:nowrap;letter-spacing:.09em}.sidebar-top strong span{color:#e5a473}.sidebar-top small{display:block;font-size:10px;opacity:.65;letter-spacing:.085em}.side-caption{font-size:11px;color:#8ba9a7;letter-spacing:.18em;padding:0 12px 13px}.chapter-nav{display:flex;flex-direction:column;gap:4px}.nav-link{border:0;color:#b4c9c7;background:transparent;display:flex;align-items:center;text-align:left;padding:10px 11px;border-radius:9px;gap:12px;font-size:12.5px;line-height:1.5}.nav-link span{color:#799b9c;font-weight:700;font-size:10px;letter-spacing:.06em}.nav-link:hover{background:#22474e;color:#fff}.nav-link.active{background:#e1efe7;color:#174a49;font-weight:800}.nav-link.active span{color:#b36f4b}.side-bottom{margin-top:auto;padding:27px 10px 0}.side-bottom p{font-size:12px;line-height:1.9;color:#a8c1bd;margin:0 0 12px}.side-bottom p b{color:#f0d1aa}.side-cta{width:100%;display:flex;justify-content:space-between;align-items:center;background:transparent;color:#dfe9e3;border:1px solid #537877;border-radius:8px;padding:12px;font-size:12px}.side-cta:hover{border-color:#9cc8b9}.side-small{font-size:10px;color:#708c8b;padding-top:17px;letter-spacing:.04em}
+.workspace{flex:1;min-width:0;display:flex;flex-direction:column;min-height:100vh;padding:0 36px}.toolbar{height:82px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:11px;letter-spacing:.15em;color:#667c7b}.crumb{font-weight:800;color:#315f61}.crumb span{font-weight:500;color:#94a3a0}.toolbar-right{display:flex;align-items:center;gap:10px;letter-spacing:.03em}.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#68aa93}.icon-btn{border:1px solid #b9c9c4;background:transparent;border-radius:50%;width:26px;height:26px;color:#4c6968;font-weight:700}.deck{flex:1;display:flex;justify-content:center;align-items:center;min-height:0}.slide{width:100%;min-height:min(640px,75vh);display:flex;flex-direction:column;padding:52px clamp(32px,5vw,74px) 45px;background:var(--cream);border:1px solid rgba(24,60,58,.06);border-radius:14px;box-shadow:var(--shadow);position:relative;overflow:hidden}.slide:not(.is-active){display:none}.slide-cover{padding:0;color:#fff;background:var(--deep);border:0}.cover-body{display:grid;grid-template-columns:1fr 45%;align-items:center;flex:1;min-height:600px;padding-left:clamp(34px,5vw,80px);position:relative}.cover-copy{z-index:2}.eyebrow,.kicker{font-size:11px;font-weight:900;letter-spacing:.19em;color:#327d79}.eyebrow.light{color:#a9d1c6;display:flex;align-items:center;gap:12px}.eyebrow.light span{padding:5px 9px;border:1px solid #5b8783;border-radius:22px;font-size:9px;letter-spacing:.08em}.cover-serial{margin-top:76px;font-size:11px;letter-spacing:.13em;color:#90bbb3}.slide-cover h1{font-size:clamp(43px,5.4vw,82px);line-height:1.16;letter-spacing:-.06em;margin:15px 0 23px;font-weight:900}.slide-cover h1 span{color:#f0ab7b}.slide-cover p{color:#bcd5d1;font-size:clamp(13px,1.2vw,17px);line-height:2}.cover-meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:40px}.cover-meta span{padding:8px 13px;border:1px solid #51747a;border-radius:4px;color:#cae0d8;font-size:11px}.cover-art{width:115%;max-width:none;align-self:stretch;min-height:540px;margin-left:-10%;z-index:1}.cover-foot{display:flex;justify-content:space-between;padding:15px 42px;font-size:10px;letter-spacing:.15em;border-top:1px solid #355860;color:#91b7b4}.slide-heading{margin-bottom:32px;max-width:840px}.slide-heading h2{font-weight:900;letter-spacing:-.055em;line-height:1.25;font-size:clamp(31px,3.3vw,50px);margin:10px 0 15px}.slide-heading h2 em{font-style:normal;color:#228277}.slide-heading p{font-size:14px;color:#657b7b;max-width:810px;line-height:1.9;margin:0}
+.step-flow{display:flex;align-items:stretch;gap:5px;margin:55px 0 35px}.step-card{border:1px solid #d9e6df;background:#f2f7f1;border-radius:12px;padding:20px 14px;flex:1;min-width:0;display:flex;flex-direction:column;gap:13px}.step-card>span{color:#d38a5e;font-size:11px;font-weight:900}.step-card strong{font-size:17px}.step-card small{color:#698180;font-size:11px}.flow-arrow{display:flex;align-items:center;color:#a4c9b9;font-size:26px}.insight{display:flex;gap:17px;padding:18px 22px;background:#e6f0e8;border-radius:9px;border-left:4px solid #539887;align-items:flex-start}.insight-icon{font-weight:900;border:1px solid #5a9684;border-radius:50%;height:24px;width:24px;display:grid;place-items:center;font-size:13px;flex:none}.insight b{font-size:14px}.insight p{margin:3px 0 0;color:#54716f;font-size:13px;line-height:1.8}.insight.warning{background:#fcf0df;border-left-color:#dea063}
+.equipment-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:17px 0 26px}.equip{border:1px solid #e2e9df;border-radius:12px;padding:19px 15px 26px;min-height:230px;background:#fbfcf8}.equip-icon{height:70px;display:grid;place-items:center;font-size:43px;color:#438c80;font-weight:800;background:#e7f1ec;border-radius:10px}.equip .number{font-size:11px;color:#d3895a;font-weight:900;display:block;margin-top:17px}.equip h3{font-size:18px;margin:3px 0 6px;letter-spacing:-.02em}.equip p{font-size:12px;color:#647b77;line-height:1.8;margin:0}.note-line{margin-top:auto;background:#fff5e8;border:1px solid #f1d9bf;padding:12px 17px;border-radius:9px;font-size:12px;color:#6c675f;line-height:1.8}
+.stance-layout{display:grid;grid-template-columns:42% 58%;gap:20px;align-items:center;margin-top:30px}.switch-pair{display:flex;background:#ecf1eb;padding:5px;gap:5px;border-radius:10px}.switch-btn{border:none;background:transparent;color:#527372;padding:12px 10px;border-radius:7px;flex:1;font-weight:900;font-size:12px;letter-spacing:.04em}.switch-btn small{display:block;font-size:10px;font-weight:500;letter-spacing:0}.switch-btn.selected{background:#18655f;color:#fff}.stance-controls h3{font-size:20px;margin:28px 0 10px}.stance-controls>p{font-size:14px;line-height:1.9;color:#5d7774}.mini-note{border-left:3px solid #e1ac77;padding:10px 13px;background:#f9efdd;color:#8b7257;font-size:12px;margin-top:30px}.stance-visual{background:#e7f1eb;padding:8px;border-radius:18px}.stance-visual svg{width:100%;height:auto}
+.columns-2{display:grid;grid-template-columns:1fr 1fr;gap:25px;flex:1}.feature-panel{border-radius:14px;background:#edf4ee;padding:28px}.feature-lead{font-size:14px;margin-bottom:19px}.feature-lead strong{color:#197b73}.feature-row{display:flex;align-items:baseline;gap:13px;border-top:1px solid #d4e4db;padding:13px 0;font-size:13px}.feature-row>span{color:#d18c63;font-size:11px;font-weight:900}.feature-row b{min-width:98px}.feature-row p{margin:0;color:#69817f}.feature-panel.dark{background:#173e45;color:#f0faf7}.kicker.pale{color:#7bb3ab}.angle-example{padding:14px 0;border-bottom:1px solid #547078;display:grid;grid-template-columns:105px 1fr;align-items:center;gap:12px}.angle-example b{font-size:28px;color:#f0b083}.angle-example p{margin:0;color:#bed1cd;font-size:12px;line-height:1.8}.tip-on-dark{font-size:12px;color:#f4c6a2;margin-top:22px}
+.movement-panel{display:grid;grid-template-columns:55% 45%;background:#e8f2ec;border-radius:12px;overflow:hidden;margin:20px 0 20px}.movement-art{padding:16px}.movement-art svg{width:100%;display:block}.movement-steps{padding:35px 28px 25px;background:#dcece5}.movement-steps h3{font-size:19px;margin:0 0 15px}.movement-steps ol{padding-left:22px;font-size:13px;color:#4c6b67;line-height:2.3;margin:0}
+.edges-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin:5px 0 24px}.edge-panel{border:1px solid #d9e4df;background:#f4f8f4;padding:20px 22px;border-radius:12px}.tiny-label{font-size:11px;letter-spacing:.12em;font-weight:900;color:#347a76}.edge-board{background:#e2f0eb;border-radius:10px;margin:12px 0}.edge-board svg{width:100%;max-height:155px}.edge-panel p{font-size:12px;color:#667f7c;line-height:1.8;margin:0}
+.diagram-wide{width:100%;background:transparent}.diagram-wide svg{display:block;max-height:280px;width:100%}.two-cues{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:21px 0}.two-cues>div{border-top:3px solid #4e9b8b;padding:12px 5px}.two-cues b{font-size:15px}.two-cues p{margin:6px 0;color:#65807c;font-size:13px}
+.turn-cols{align-items:center}.turn-visual svg{width:100%;max-height:310px}.turn-notes{padding:20px}.turn-notes h3{font-size:24px;line-height:1.5;margin:13px 0}.turn-notes>p{font-size:13px;color:#5d7976;line-height:2}.small-insight{border-left:4px solid #eaa678;background:#fbf0e2;padding:14px 17px;border-radius:4px;font-size:12px;line-height:1.9;color:#735f4c;margin-top:27px}
+.s-layout{display:grid;grid-template-columns:40% 60%;gap:40px;align-items:center}.s-path svg{width:100%;max-height:350px}.s-points{display:flex;flex-direction:column;gap:18px}.point-row{display:flex;gap:17px;align-items:flex-start}.point-row>span{display:grid;place-items:center;background:#e1eee6;color:#177468;border-radius:50%;width:38px;height:38px;font-weight:900;flex:none}.point-row h3{font-size:18px;margin:0 0 5px}.point-row p{font-size:13px;line-height:1.8;color:#617d78;margin:0}
+.safety-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;margin:0 0 23px}.safety-list>div{border:1px solid #e1e7df;background:#fbfcf8;display:flex;align-items:flex-start;padding:17px;border-radius:10px;gap:13px;min-height:76px}.safety-list span{font-size:11px;font-weight:900;color:#d58e61}.safety-list p{margin:0;font-size:13px;color:#355d5d;line-height:1.6}
+.quiz{display:grid;grid-template-columns:1fr;gap:10px}.question{padding:12px 15px;background:#f1f5ef;border-radius:9px}.question h3{font-size:14px;margin:0 0 10px;line-height:1.4}.question h3 span{color:#d38b5d;margin-right:8px}.answers{display:flex;gap:10px;flex-wrap:wrap}.answers button{border:1px solid #cbdad2;background:#fff;color:#36585b;padding:7px 15px;border-radius:7px;font-size:12px}.answers button:hover{border-color:#268b7f}.answers button.chosen{background:#d6e9df;color:#18594e;border-color:#70a99b}.answers button.wrong{background:#fff0e6;color:#a76238;border-color:#e0ac7e}.quiz-feedback{font-size:11px;margin:4px 0 0;color:#537d75;min-height:0}.quiz-footer{display:flex;justify-content:space-between;align-items:center;margin-top:13px;font-size:12px;color:#4e8178}.text-btn{border:0;background:transparent;color:#b76a47;font-weight:700}.closing-caption{margin-top:15px;padding-top:14px;border-top:1px solid #dbe4dc;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.11em;color:#66807c;gap:8px}.closing-caption button{border:0;background:transparent;color:#236e66;font-size:11px;letter-spacing:0}
+.deck-footer{height:85px;display:flex;align-items:center;justify-content:space-between;gap:12px}.footer-left{display:flex;align-items:center;gap:16px}.source-button{font-size:12px;color:#315e5b;border:1px solid #bfd1c8;background:#eef5ee;padding:10px 13px;border-radius:7px;font-weight:800}.source-button:hover{background:#ddecdf}.source-symbol{font-size:18px;margin-right:6px;vertical-align:-1px}.footer-note{font-size:10px;color:#81928e}.footer-nav{display:flex;align-items:center;gap:9px}.footer-nav #pageNum{font-size:12px;letter-spacing:.12em;color:#6e8884;min-width:71px}.footer-nav button{width:43px;height:43px;border:1px solid #bdcdc6;background:#f6fbf7;color:#275d5d;border-radius:7px;font-size:20px}.footer-nav button:hover:not(:disabled){background:#d9e9e0}.footer-nav button:disabled{opacity:.3;cursor:default}
+dialog{border:0;box-shadow:0 25px 80px rgba(0,30,30,.3);border-radius:15px;color:var(--ink);background:var(--cream);max-height:80vh;max-width:min(610px,calc(100vw - 32px));width:610px;padding:29px;overflow:auto}dialog::backdrop{background:rgba(13,43,49,.7)}.dialog-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}.dialog-top h2{font-size:26px;margin:7px 0 9px}.close-btn{border:1px solid #c7d5cd;background:#fff;border-radius:50%;width:35px;height:35px;color:#315c59}.dialog-intro{color:#71817c;font-size:13px;line-height:1.9;margin:0 0 18px}.source-item{padding:13px 0;border-top:1px solid #e0e8e0}.source-item b{display:block;color:#315e5c;font-size:13px}.source-item p{font-size:12px;color:#71817b;margin:4px 0}.source-item a{font-size:12px;word-break:break-word}.source-id{font-size:11px;color:#ce875a;letter-spacing:.1em;font-weight:900;margin-right:8px}.dialog-bottom{margin-top:13px;border-top:1px solid #dce5dc;padding-top:14px;display:flex;justify-content:space-between;gap:14px;align-items:center}.dialog-bottom a{font-size:12px;font-weight:800}.dialog-bottom small{color:#83958b;font-size:10px}.help-dialog p{font-size:14px;line-height:2;color:#5e7873}.help-dialog kbd{background:#e8f1e9;border:1px solid #cbded0;border-radius:5px;padding:2px 8px;color:#2c6d67}
+@media(min-width:1600px){.slide{min-height:660px}}@media(max-width:1180px){.sidebar{width:235px;flex-basis:235px}.workspace{padding:0 22px}.slide{min-height:610px;padding:35px 40px}.slide-cover{padding:0}.cover-body{min-height:575px}.cover-serial{margin-top:37px}.cover-art{min-height:495px}.slide-heading{margin-bottom:18px}.slide-heading h2{font-size:39px}.equip{min-height:220px}}@media(max-width:900px){.sidebar{width:75px;flex-basis:75px;padding:18px 8px;overflow:visible}.sidebar-top{padding:3px 7px 20px}.sidebar-top>div:last-child,.side-caption,.nav-link:not(.active),.nav-link.active{font-size:0}.sidebar-top svg{width:36px}.chapter-nav{gap:2px}.nav-link{justify-content:center;padding:10px 0}.nav-link span{font-size:11px}.side-bottom{display:none}.workspace{padding:0 17px}.slide{padding:32px 32px}.slide-cover{padding:0}.cover-body{min-height:510px;padding-left:38px}.cover-art{min-height:480px}.slide-heading h2{font-size:34px}.equip{padding:12px}.equip h3{font-size:15px}.equipment-grid{gap:7px}.columns-2{gap:12px}.feature-panel{padding:16px}.angle-example{grid-template-columns:75px 1fr}.angle-example b{font-size:22px}}
+@media(max-width:650px){body{background:#f1f3ee}.app{display:block;min-height:100dvh}.sidebar{position:relative;height:auto;width:100%;min-height:0;padding:10px 16px;display:block}.sidebar-top{padding:3px 0;gap:9px}.sidebar-top>div:last-child{display:block}.sidebar-top strong{font-size:12px}.sidebar-top small{font-size:9px}.chapter-nav,.side-caption,.side-bottom{display:none}.workspace{padding:0 12px;min-height:calc(100dvh - 70px)}.toolbar{height:56px;font-size:10px}.toolbar-right{font-size:0}.toolbar-right .status-dot{display:none}.icon-btn{font-size:12px}.deck{display:block}.slide{min-height:calc(100dvh - 176px);padding:29px 22px 28px}.slide-cover{padding:0}.cover-body{display:flex;flex-direction:column;align-items:stretch;min-height:calc(100dvh - 214px);padding:28px 24px 0}.cover-copy{z-index:2}.cover-serial{margin-top:29px}.slide-cover h1{font-size:43px;margin:7px 0 12px}.slide-cover p{font-size:12px}.cover-meta{margin-top:18px}.cover-meta span{font-size:9px;padding:6px 8px}.cover-art{align-self:flex-end;width:75%;min-height:0;height:220px;margin-top:auto;margin-right:-10px}.cover-foot{padding:13px 20px;font-size:8px}.cover-foot span{display:none}.slide-heading{margin-bottom:19px}.slide-heading h2{font-size:30px}.slide-heading p{font-size:12px}.kicker{font-size:10px}.step-flow{margin:15px 0;display:grid;grid-template-columns:1fr 1fr;gap:8px}.step-card{padding:14px;gap:5px}.step-card strong{font-size:15px}.flow-arrow{display:none}.equipment-grid{grid-template-columns:1fr 1fr;gap:9px}.equip{min-height:170px;padding:12px}.equip-icon{font-size:28px;height:44px}.equip .number{margin-top:9px}.equip h3{font-size:15px}.equip p{font-size:11px}.stance-layout,.columns-2,.movement-panel,.edges-grid,.two-cues,.turn-cols,.s-layout,.safety-list{grid-template-columns:1fr}.stance-layout{gap:12px}.stance-controls h3{margin-top:13px;font-size:16px}.stance-controls>p{font-size:12px}.mini-note{margin-top:10px}.stance-visual{padding:0}.feature-row{padding:9px 0}.feature-panel.dark{padding:20px}.movement-art{padding:8px}.movement-steps{padding:14px}.movement-steps h3{margin:0;font-size:17px}.movement-steps ol{font-size:12px;line-height:2}.edge-panel{padding:12px}.edge-board svg{max-height:95px}.diagram-wide svg{height:150px}.two-cues{gap:5px}.two-cues>div{padding:8px}.turn-visual svg{max-height:170px}.turn-notes{padding:0}.turn-notes h3{font-size:19px}.turn-notes>p{font-size:12px}.small-insight{margin-top:10px}.s-path svg{max-height:175px}.s-points{gap:12px}.point-row h3{font-size:15px}.point-row p{font-size:12px}.safety-list{gap:7px}.safety-list>div{min-height:0;padding:11px}.quiz{gap:8px}.question{padding:10px}.question h3{font-size:12px}.answers{gap:4px}.answers button{font-size:11px;padding:6px 9px}.closing-caption{font-size:9px}.footer-note{display:none}.deck-footer{height:70px}.footer-nav button{width:39px;height:39px}.source-button{padding:8px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.sidebar,.toolbar,.deck-footer,dialog{display:none!important}.workspace{padding:0}.deck{display:block}.slide,.slide:not(.is-active),.slide[hidden]{display:flex!important;break-after:page;box-shadow:none;min-height:90vh;border:0}.cover-body{min-height:75vh}body{background:white}}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#stage">跳至教學內容</a>
+  <div class="app">
+    <aside class="sidebar" aria-label="簡報章節導覽">
+      <div class="sidebar-top">
+        <div class="logo-mark" aria-hidden="true"><svg viewBox="0 0 42 42" width="42" height="42"><rect x="3" y="3" width="36" height="36" rx="12" fill="#e2f1e8"/><path d="M4 29L15 15L22 24L27 19L38 31" stroke="#1c746b" stroke-width="3" fill="none" stroke-linejoin="round"/><path d="M10 32L30 11" stroke="#f29b63" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <div><strong>SNOWBOARD <span>101</span></strong><small>LLM Wiki × Learning Deck</small></div>
+      </div>
+      <div class="side-caption">CONTENT / 教學目錄</div>
+      <nav id="chapterNav" class="chapter-nav">
+        <button data-jump="0" class="nav-link active"><span>01</span>封面與學習目標</button>
+        <button data-jump="1" class="nav-link"><span>02</span>學習地圖</button>
+        <button data-jump="2" class="nav-link"><span>03</span>第一次裝備</button>
+        <button data-jump="3" class="nav-link"><span>04</span>Regular / Goofy</button>
+        <button data-jump="4" class="nav-link"><span>05</span>Binding 設定</button>
+        <button data-jump="5" class="nav-link"><span>06</span>Skating 滑行</button>
+        <button data-jump="6" class="nav-link"><span>07</span>Toe / Heel Edge</button>
+        <button data-jump="7" class="nav-link"><span>08</span>落葉飄 Falling Leaf</button>
+        <button data-jump="8" class="nav-link"><span>09</span>單次轉彎 J / C</button>
+        <button data-jump="9" class="nav-link"><span>10</span>連續 S Turn</button>
+        <button data-jump="10" class="nav-link"><span>11</span>安全守則</button>
+        <button data-jump="11" class="nav-link"><span>12</span>互動測驗與總結</button>
+      </nav>
+      <div class="side-bottom">
+        <p>知識來源已整理為 <b>6 份 ingest</b> 與 <b>7 篇 Wiki</b>。</p>
+        <button id="openSourcesSide" class="side-cta">查看來源索引 <span aria-hidden="true">↗</span></button>
+        <div class="side-small">2026 · Offline-ready HTML</div>
+      </div>
+    </aside>
+
+    <main id="stage" class="workspace" tabindex="-1">
+      <header class="toolbar">
+        <div class="crumb">INTRO / <span id="sectionName">從零開始</span></div>
+        <div class="toolbar-right"><span class="status-dot"></span> 新手教學 · 概念入門 <button id="helpBtn" class="icon-btn" title="快捷鍵說明" aria-label="快捷鍵說明">?</button></div>
+      </header>
+      <div class="deck">
+
+        <section class="slide slide-cover is-active" id="slide-01" data-title="從零開始" data-wiki="07-learning-path.md" data-source-ids="S01,S04,S05" aria-roledescription="投影片">
+          <div class="cover-body">
+            <div class="cover-copy">
+              <div class="eyebrow light">BEGINNER COURSE <span>2026 EDITION</span></div>
+              <div class="cover-serial">01 / THE BEGINNING</div>
+              <h1>從零開始<br>學<span>單板滑雪。</span></h1>
+              <p>一次看懂裝備、站姿、控刃與轉彎。<br>從第一步建立對雪板的正確理解。</p>
+              <div class="cover-meta"><span>12 個教學單元</span><span>3 道互動測驗</span><span>6 篇資料來源</span></div>
+            </div>
+            <svg class="cover-art" viewBox="0 0 520 560" role="img" aria-label="原創雪山、滑雪者及 S 型滑行軌跡插畫">
+              <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#6fb3b1"/><stop offset="1" stop-color="#dcf1e8"/></linearGradient></defs>
+              <circle cx="358" cy="133" r="83" fill="#fbd39d" opacity=".88"/><path d="M0 380L136 198L207 297L304 135L520 397V560H0Z" fill="#aed6cc"/><path d="M80 450L194 268L253 349L335 232L520 460V560H0Z" fill="#e4f3e9"/><path d="M305 134L273 184L309 175L340 185Z" fill="#fff"/><path d="M136 198L112 232L141 225L164 236Z" fill="#fff"/>
+              <path d="M410 294C333 268 310 324 374 362S421 424 315 431S203 479 261 524" fill="none" stroke="#e58252" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 20"/>
+              <g transform="translate(313 298) rotate(14)"><path d="M-65 97Q-75 109 -64 115Q-21 133 67 113Q88 108 72 96" fill="#163d42"/><path d="M-20 27L-45 93M16 31L29 99" stroke="#183f44" stroke-width="21" stroke-linecap="round"/><path d="M-29 15Q-11 -8 15 9L35 59L-44 59Z" fill="#f6a776"/><path d="M-38 31L-70 47M29 30L64 55" stroke="#f6a776" stroke-width="14" stroke-linecap="round"/><circle cx="0" cy="-11" r="28" fill="#f5c8a6"/><path d="M-29 -15Q-20 -58 14 -44Q31 -39 28 -14Z" fill="#143b42"/><path d="M-28 -15H28" stroke="#e7f4e8" stroke-width="8" stroke-linecap="round"/><path d="M-15 -18H17" stroke="#345d5f" stroke-width="11" stroke-linecap="round"/></g>
+              <text x="468" y="531" font-size="16" fill="#245e5c" text-anchor="end">KEEP YOUR EDGE.</text>
+            </svg>
+          </div>
+          <div class="cover-foot">KNOW YOUR BOARD. KNOW YOUR LINE. <span>SCROLL-FREE DECK ↗</span></div>
+        </section>
+
+        <section class="slide" id="slide-02" data-title="學習地圖" data-wiki="07-learning-path.md" data-source-ids="S01,S04,S05" aria-roledescription="投影片" hidden>
+          <div class="slide-heading"><span class="kicker">02 / COURSE MAP</span><h2>不是先學快，<br><em>而是先學會控制。</em></h2><p>這份簡報的目標是理解每個動作在「解決什麼問題」，不是保證一天學會 S Turn。</p></div>
+          <div class="step-flow">
+            <div class="step-card"><span>01</span><strong>裝備與站姿</strong><small>先能安全站上板</small></div>
+            <div class="flow-arrow">→</div>
+            <div class="step-card"><span>02</span><strong>滑行與控刃</strong><small>先能慢下來</small></div>
+            <div class="flow-arrow">→</div>
+            <div class="step-card"><span>03</span><strong>單次轉彎</strong><small>學會改變方向</small></div>
+            <div class="flow-arrow">→</div>
+            <div class="step-card"><span>04</span><strong>連續 S Turn</strong><small>串起控制與轉向</small></div>
+          </div>
+          <div class="insight"><span class="insight-icon">!</span><div><b>先記住兩句話</b><p>雪板的兩條「長邊」負責控刃；轉彎是用來控制方向與速度，不只是畫出漂亮的 S。</p></div></div>
+        </section>
+
+        <section class="slide" id="slide-03" data-title="第一次裝備" data-wiki="01-equipment.md" data-source-ids="S01,S03,S06" aria-roledescription="投影片" hidden>
+          <div class="slide-heading"><span class="kicker">03 / EQUIPMENT</span><h2>第一次滑雪，<em>先認識四樣裝備。</em></h2><p>可以先租借，不需要在還不知道適合自己的配置前買齊所有器材。</p></div>
+          <div class="equipment-grid">
+            <article class="equip"><div class="equip-icon">▰</div><span class="number">01</span><h3>Snowboard</h3><p>雪板：尺寸與種類要適合初學者及雪場地形。</p></article>
+            <article class="equip"><div class="equip-icon">♙</div><span class="number">02</span><h3>Boots</h3><p>雪鞋：腳跟要穩，貼合但不壓迫。</p></article>
+            <article class="equip"><div class="equip-icon">⊞</div><span class="number">03</span><h3>Bindings</h3><p>固定器：連結鞋與板，需確認相容及鎖緊。</p></article>
+            <article class="equip"><div class="equip-icon">◡</div><span class="number">04</span><h3>Protection</h3><p>安全帽、雪衣褲、手套：保暖也保護自己。</p></article>
+          </div>
+          <div class="note-line"><b>出發前：</b>檢查雪鞋、綁帶、螺絲與安全帽是否合身且確實固定。</div>
+        </section>
+
+        <section class="slide" id="slide-04" data-title="Regular / Goofy" data-wiki="02-stance.md" data-source-ids="S02" aria-roledescription="投影片" hidden>
+          <div class="slide-heading"><span class="kicker">04 / STANCE</span><h2>你是哪一腳在前？<em>先分清 Regular / Goofy。</em></h2><p>「前腳」指靠近雪板板頭的腳，與前刃／後刃完全是不同概念。</p></div>
+          <div class="stance-layout">
+            <div class="stance-controls"><div class="switch-pair" role="group" aria-label="選擇站姿"><button class="switch-btn selected" data-stance="regular" aria-pressed="true">REGULAR <small>左腳在前</small></button><button class="switch-btn" data-stance="goofy" aria-pressed="false">GOOFY <small>右腳在前</small></button></div><h3 id="stanceTitle">Regular：左腳在前</h3><p id="stanceDesc">左腳靠近板頭、右腳靠近板尾。這是站姿名稱，不代表比較正確。</p><div class="mini-note">示意圖可切換。真實站姿以舒適、平衡與實際操作為準。</div></div>
+            <div class="stance-visual"><svg id="stanceSvg" viewBox="0 0 470 250" role="img" aria-label="雪板板頭在左的 Regular 站姿示意圖"><defs><linearGradient id="board" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#266b6c"/><stop offset="1" stop-color="#153c45"/></linearGradient></defs><text x="32" y="33" font-size="17" fill="#2f7772" font-weight="700">NOSE / 板頭</text><path d="M97 36L70 36L70 65" stroke="#2f7772" stroke-width="2" fill="none"/><text x="350" y="33" font-size="17" fill="#2f7772" font-weight="700">TAIL / 板尾</text><path d="M379 36L400 36L400 65" stroke="#2f7772" stroke-width="2" fill="none"/><rect x="40" y="80" width="390" height="76" rx="37" fill="url(#board)"/><path d="M65 100H405" stroke="#fff" stroke-opacity=".15" stroke-width="2"/><g id="leftBinding"><rect x="128" y="73" width="57" height="91" rx="13" fill="#e7b17c" stroke="#fff" stroke-width="3"/><text x="156" y="126" font-size="23" text-anchor="middle" fill="#163a42">L</text></g><g id="rightBinding"><rect x="285" y="73" width="57" height="91" rx="13" fill="#d9e8dc" stroke="#fff" stroke-width="3"/><text x="313" y="126" font-size="23" text-anchor="middle" fill="#163a42">R</text></g><path d="M260 213H210" stroke="#2f7772" stroke-width="3"/><path d="M220 204L210 213L220 222" stroke="#2f7772" stroke-width="3" fill="none"/><text x="235" y="242" text-anchor="middle" font-size="16" fill="#2f7772">前進方向（示意）</text></svg></div>
+          </div>
+        </section>
+
+        <section class="slide" id="slide-05" data-title="Binding 設定" data-wiki="02-stance.md" data-source-ids="S02,S06" aria-roledescription="投影片" hidden>
+          <div class="slide-heading"><span class="kicker">05 / BOARD SETUP</span><h2>Binding 角度<em>沒有萬用答案。</em></h2><p>選擇站姿不是抄一組數字就結束，還要考慮站距、舒適感和個人滑行方式。</p></div>
+          <div class="columns-2">
+            <div class="feature-panel"><div class="feature-lead">你的站姿由 <strong>4 個項目</strong> 組成</div><div class="feature-row"><span>01</span><b>前後腳</b><p>Regular / Goofy</p></div><div class="feature-row"><span>02</span><b>站距 Width</b><p>可從雪板參考站距測試</p></div><div class="feature-row"><span>03</span><b>角度 Angle</b><p>正角朝板頭；負角朝板尾</p></div><div class="feature-row"><span>04</span><b>偏移 Setback</b><p>固定器相對板中心的位置</p></div></div>
+            <div class="feature-panel dark"><span class="kicker pale">TWO COMMON EXAMPLES</span><div class="angle-example"><b>＋ / 0</b><p>前腳朝板頭、後腳較接近垂直，是 Burton 提到的一種初學起點。</p></div><div class="angle-example"><b>＋ / −</b><p>俗稱 Duck Stance，對需要雙向滑行的玩法常見。</p></div><div class="tip-on-dark">起點 ≠ 唯一正解。先合身與穩定，再由教練協助微調。</div></div>
+          </div>
+        </section>
+
+        <section class="slide" id="slide-06" data-title="Skating 滑行" data-wiki="03-first-glide.md" data-source-ids="S01,S03,S04" aria-roledescription="投影片" hidden>
+          <div class="slide-heading"><span class="kicker">06 / FIRST MOVES</span><h2>先練平地移動，<em>再慢慢下坡。</em></h2><p>Skating 是前腳固定、後腳在雪面推行；這和兩腳綁好直衝下坡不是一回事。</p></div>
+          <div class="movement-panel"><div class="movement-art"><svg viewBox="0 0 520 240" role="img" aria-label="前腳固定、後腳推動雪板的 Skating 示意圖"><path d="M25 190Q190 175 485 190" stroke="#6db8b0" stroke-width="3" fill="none" stroke-dasharray="9 8"/><path d="M70 204Q250 213 441 204" stroke="#d4b58b" stroke-width="5" fill="none"/><g transform="translate(120 40)"><rect x="80" y="137" width="190" height="13" rx="7" fill="#1d565b"/><circle cx="185" cy="30" r="21" fill="#e6c39e"/><path d="M173 53L148 106L207 109L199 56" fill="#d89566"/><path d="M153 100L124 140L147 145L180 115M197 100L252 151L272 147L219 94" stroke="#183e44" stroke-width="18" stroke-linecap="round" fill="none"/><path d="M167 65L129 82M196 65L238 76" stroke="#d89566" stroke-width="11" stroke-linecap="round"/><path d="M122 147H151M246 148H278" stroke="#1b3f44" stroke-width="13" stroke-linecap="round"/></g><path d="M63 158H22" stroke="#c9724e" stroke-width="4"/><path d="M31 150L22 158L31 166" stroke="#c9724e" stroke-width="3" fill="none"/><text x="55" y="127" fill="#4a7670" font-size="14">前進</text><text x="330" y="70" fill="#173f46" font-size="17" font-weight="700">後腳推行</text><path d="M350 80L367 127" stroke="#173f46" fill="none" stroke-width="2"/></svg></div><div class="movement-steps"><h3>三件事先做到</h3><ol><li>在平坦、安全的區域練習。</li><li>膝蓋保持彈性，眼睛看行進方向。</li><li>能穩定移動、控制速度，再依教練指示進入低緩坡。</li></ol></div></div>
+          <div class="note-line">這裡是動作概念說明；真正的地形選擇與練習方式，應由現場教練指導。</div>
+        </section>
+
+        <section class="slide" id="slide-07" data-title="Toe / Heel Edge" data-wiki="04-edges.md" data-source-ids="S01,S04" aria-roledescription="投影片" hidden>
+          <div class="slide-heading"><span class="kicker">07 / EDGE CONTROL</span><h2>雪板最重要的兩條邊：<em>Heel / Toe Edge。</em></h2><p>雪板左右兩側的長刃能幫助你控制滑動和減速，不是「哪隻腳在前」的意思。</p></div>
+          <div class="edges-grid">
+            <div class="edge-panel"><span class="tiny-label">HEEL EDGE / 腳跟側刃</span><div class="edge-board heel"><svg viewBox="0 0 280 150" role="img" aria-label="在腳跟方向施力使雪板長刃接觸雪面的示意圖"><path d="M25 110H255" stroke="#9acac7" stroke-width="4" stroke-linecap="round"/><path d="M46 95L240 95" stroke="#173f48" stroke-width="18" stroke-linecap="round"/><path d="M56 91L228 91" stroke="#f3ac79" stroke-width="5"/><path d="M135 72V42" stroke="#295d67" stroke-width="14" stroke-linecap="round"/><path d="M116 52L147 61" stroke="#d4a37b" stroke-width="18" stroke-linecap="round"/><path d="M116 52L102 86" stroke="#d4a37b" stroke-width="7"/><path d="M130 37L107 22" stroke="#234c56" stroke-width="4" stroke-linecap="round"/><text x="140" y="141" text-anchor="middle" font-size="14" fill="#265964">腳跟方向承重</text></svg></div><p>用腳跟側長刃控制滑行，常用在面向下坡的初學者練習。</p></div>
+            <div class="edge-panel"><span class="tiny-label">TOE EDGE / 腳尖側刃</span><div class="edge-board toe"><svg viewBox="0 0 280 150" role="img" aria-label="在腳尖方向施力使雪板長刃接觸雪面的示意圖"><path d="M25 110H255" stroke="#9acac7" stroke-width="4" stroke-linecap="round"/><path d="M46 95L240 95" stroke="#173f48" stroke-width="18" stroke-linecap="round"/><path d="M56 91L228 91" stroke="#f3ac79" stroke-width="5"/><path d="M135 72V42" stroke="#295d67" stroke-width="14" stroke-linecap="round"/><path d="M116 52L147 61" stroke="#d4a37b" stroke-width="18" stroke-linecap="round"/><path d="M147 61L165 87" stroke="#d4a37b" stroke-width="7"/><path d="M130 37L150 22" stroke="#234c56" stroke-width="4" stroke-linecap="round"/><text x="140" y="141" text-anchor="middle" font-size="14" fill="#265964">腳尖方向承重</text></svg></div><p>用腳尖側長刃控制滑行，常見於背向下坡的初學者練習。</p></div>
+          </div>
+          <div class="insight warning"><span class="insight-icon">!</span><div><b>術語檢查：前刃 ≠ 前腳</b><p>Toe / Heel 是雪板的兩條長邊；Regular / Goofy 才描述哪隻腳在前。</p></div></div>
+        </section>
+
+        <section class="slide" id="slide-08" data-title="落葉飄 Falling Leaf" data-wiki="05-turns.md" data-source-ids="S01,S04" aria-roledescription="投影片" hidden>
+          <div class="slide-heading"><span class="kicker">08 / FALLING LEAF</span><h2>落葉飄：<em>同一條刃，也能左右移動。</em></h2><p>這個練習不是比誰下坡快，而是熟悉「往左／往右移動，再回到中央控速」。</p></div>
+          <div class="diagram-wide"><svg viewBox="0 0 760 280" role="img" aria-label="在同一條邊刃上沿雪坡左右橫移的落葉飄路徑"><defs><linearGradient id="slope" x1="0" x2="1"><stop stop-color="#e5f4ef"/><stop offset="1" stop-color="#c8e5df"/></linearGradient></defs><rect x="20" y="20" width="720" height="240" rx="26" fill="url(#slope)"/><path d="M380 46V248" stroke="#91bbb4" stroke-dasharray="7 12" stroke-width="2"/><path d="M387 196Q240 189 199 150Q173 123 300 112Q480 101 540 133Q592 159 434 189" fill="none" stroke="#e38d5c" stroke-width="8" stroke-linecap="round"/><path d="M441 177L429 190L449 196" fill="none" stroke="#e38d5c" stroke-width="5" stroke-linecap="round"/><g fill="#1b6464"><circle cx="199" cy="150" r="11"/><circle cx="538" cy="134" r="11"/></g><text x="180" y="124" text-anchor="middle" font-size="18" fill="#16565b" font-weight="700">向左移動</text><text x="556" y="107" text-anchor="middle" font-size="18" fill="#16565b" font-weight="700">向右移動</text><text x="380" y="231" text-anchor="middle" font-size="17" fill="#1d6665">同一條刃 · 控制速度</text><text x="70" y="50" fill="#4d7977" font-size="14">TOP VIEW / 俯視示意</text></svg></div>
+          <div class="two-cues"><div><b>① 練方向</b><p>在同一條刃上，用左右重心調整橫移方向。</p></div><div><b>② 練速度</b><p>回到中央時減速，先會停，再開始下一段。</p></div></div>
+        </section>
+
+        <section class="slide" id="slide-09" data-title="單次轉彎 J / C" data-wiki="05-turns.md" data-source-ids="S01,S04" aria-roledescription="投影片" hidden>
+          <div class="slide-heading"><span class="kicker">09 / FIRST TURN</span><h2>單次轉彎：<em>讓雪板朝側邊走。</em></h2><p>你可能看過 J-turn 或 C-turn 的叫法；不同教材的命名與安排不完全相同。</p></div>
+          <div class="columns-2 turn-cols"><div class="turn-visual"><svg viewBox="0 0 400 300" role="img" aria-label="由上往下滑行後逐漸轉向側邊，形成單次彎曲路徑"><rect x="18" y="16" width="364" height="268" rx="22" fill="#e1f0ea"/><path d="M160 37Q161 117 167 166Q176 229 290 229" fill="none" stroke="#e58f5c" stroke-width="12" stroke-linecap="round"/><path d="M275 214L297 229L274 245" stroke="#e58f5c" stroke-width="8" fill="none" stroke-linecap="round"/><circle cx="160" cy="37" r="12" fill="#21575d"/><text x="185" y="44" font-size="17" fill="#20535a">開始</text><text x="304" y="231" font-size="16" fill="#20535a">轉向</text></svg></div><div class="turn-notes"><span class="tiny-label">WHAT TO UNDERSTAND</span><h3>轉彎是為了控速與轉向</h3><p>當你能在低速下平衡並穩定控制單一刃，就可以在教練指導下理解轉彎如何從一個方向逐步帶到坡面側邊。</p><div class="small-insight">Burton 使用 Falling Leaf → C-turn 的表述；REI 介紹 J-turn、Traverse 再到連續轉彎。這份課程只保留兩者共同的基礎概念。</div></div></div>
+        </section>
+
+        <section class="slide" id="slide-10" data-title="連續 S Turn" data-wiki="05-turns.md" data-source-ids="S01,S04" aria-roledescription="投影片" hidden>
+          <div class="slide-heading"><span class="kicker">10 / LINKING TURNS</span><h2>連續 S Turn：<em>把一個個轉彎連起來。</em></h2><p>能從一側轉到另一側，並持續控制速度，才算真正理解連續轉彎的目的。</p></div>
+          <div class="s-layout"><div class="s-path"><svg viewBox="0 0 300 370" role="img" aria-label="往下延伸的 S 型連續轉彎軌跡"><rect x="17" y="15" width="266" height="338" rx="25" fill="#e1f0eb"/><path d="M145 37C280 70 262 139 140 167C20 196 24 258 146 285C231 305 233 325 205 339" stroke="#ea9966" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M197 322L205 339L220 329" stroke="#ea9966" stroke-width="6" fill="none" stroke-linecap="round"/><text x="31" y="46" fill="#4c827d" font-size="15">TOP VIEW</text><text x="217" y="100" fill="#205760" font-size="13">轉向 ①</text><text x="40" y="242" fill="#205760" font-size="13">轉向 ②</text></svg></div><div class="s-points"><div class="point-row"><span>1</span><div><h3>每一個彎都能控速</h3><p>不是朝落線直衝，而是讓轉彎幫助你調整速度與方向。</p></div></div><div class="point-row"><span>2</span><div><h3>兩側轉彎穩定銜接</h3><p>進入下一個彎時，雪板控制不能突然消失。</p></div></div><div class="point-row"><span>3</span><div><h3>別把 S Turn 當成刻滑</h3><p>初學的連續轉彎可能包含側滑；純刻滑（Carving）是另一個進階技術課題。</p></div></div></div></div>
+        </section>
+
+        <section class="slide" id="slide-11" data-title="安全守則" data-wiki="06-safety.md" data-source-ids="S05,S03" aria-roledescription="投影片" hidden>
+          <div class="slide-heading"><span class="kicker">11 / MOUNTAIN SAFETY</span><h2>上雪場第一守則：<em>能停下來比滑得快重要。</em></h2><p>以下是 NSAA《Your Responsibility Code》的重點摘錄；仍須遵守你所在雪場的規定。</p></div>
+          <div class="safety-list"><div><span>01</span><p>保持控制，能避開人與障礙物。</p></div><div><span>02</span><p>前方或下坡滑行者優先，後方的人必須避讓。</p></div><div><span>03</span><p>不要停在視線死角或妨礙他人的地方。</p></div><div><span>04</span><p>起滑／進入雪道前先觀察上坡來人。</p></div><div><span>05</span><p>遵守雪場標示、封閉區域與纜車規範。</p></div><div><span>06</span><p>防止裝備失控滑走；發生碰撞要依規定通報。</p></div></div>
+          <div class="note-line"><b>重要：</b>線上簡報只能補充觀念，不能取代實地授課。滑雪具有跌倒、碰撞與重傷風險。</div>
+        </section>
+
+        <section class="slide" id="slide-12" data-title="互動測驗與總結" data-wiki="07-learning-path.md" data-source-ids="S02,S04,S05" aria-roledescription="投影片" hidden>
+          <div class="slide-heading"><span class="kicker">12 / QUICK CHECK</span><h2>最後，<em>確認你記住什麼。</em></h2><p>請選擇每題最合理的答案；這是概念測驗，不是上雪場的能力認證。</p></div>
+          <div class="quiz" id="quiz">
+            <div class="question" data-question="q1"><h3><span>Q1</span> 左腳在前的站姿叫什麼？</h3><div class="answers"><button data-answer="a">Regular</button><button data-answer="b">Goofy</button><button data-answer="c">Heel Edge</button></div><p class="quiz-feedback" aria-live="polite"></p></div>
+            <div class="question" data-question="q2"><h3><span>Q2</span> 落葉飄主要是在練習什麼？</h3><div class="answers"><button data-answer="a">高速直衝</button><button data-answer="b">單刃方向與控速</button><button data-answer="c">空中旋轉</button></div><p class="quiz-feedback" aria-live="polite"></p></div>
+            <div class="question" data-question="q3"><h3><span>Q3</span> 雪道上誰通常具有優先通行權？</h3><div class="answers"><button data-answer="a">速度快的人</button><button data-answer="b">後方追上來的人</button><button data-answer="c">前方或下坡的人</button></div><p class="quiz-feedback" aria-live="polite"></p></div>
+          </div>
+          <div class="quiz-footer"><span id="quizScore" aria-live="polite">已回答 0 / 3 題</span><button id="resetQuiz" class="text-btn">重新作答 ↻</button></div>
+          <div class="closing-caption">REMEMBER: CONTROL → TURNS → CONFIDENCE. <button id="endSourceBtn">查看完整資料來源 ↗</button></div>
+        </section>
+
+      </div>
+      <footer class="deck-footer">
+        <div class="footer-left"><button id="sourceBtn" class="source-button"><span class="source-symbol">⌁</span> 本頁知識來源</button><span class="footer-note">課程概念須搭配實際教練指導</span></div>
+        <div class="footer-nav"><span id="pageNum">01 / 12</span><button id="prevBtn" aria-label="上一頁" disabled>←</button><button id="nextBtn" aria-label="下一頁">→</button></div>
+      </footer>
+    </main>
+  </div>
+
+  <dialog id="sourceDialog" class="source-dialog" aria-labelledby="sourceHeading"><div class="dialog-top"><div><span class="kicker">SOURCE MAPPING / EVIDENCE</span><h2 id="sourceHeading">來源索引</h2></div><button id="closeSources" class="close-btn" aria-label="關閉來源視窗">✕</button></div><p class="dialog-intro">每頁簡報標記了來源 ID；原始公開網頁可直接查閱，對應的 Wiki 也收錄在此份作業資料夾。</p><div id="sourceContent"></div><div class="dialog-bottom"><a href="wiki/index.md" target="_blank" rel="noopener">開啟 Wiki 總目錄 ↗</a><small>讀書筆記為中文改寫摘要，非全文轉載。</small></div></dialog>
+  <dialog id="helpDialog" class="help-dialog" aria-labelledby="helpHeading"><div class="dialog-top"><h2 id="helpHeading">瀏覽方式</h2><button id="closeHelp" class="close-btn" aria-label="關閉說明">✕</button></div><p>按 <kbd>←</kbd> <kbd>→</kbd> 切換投影片，<kbd>Home</kbd> 回到第一頁，<kbd>End</kbd> 前往最後一頁；也可直接點選左側章節。</p><p>在站姿頁切換 Regular / Goofy；在最後一頁可以作答三題測驗。</p></dialog>
+  <script>(()=>{
+'use strict';
+const sources={
+ S01:{publisher:'Burton',title:'Learn to Snowboard: Quick and Easy Tips for Beginners',url:'https://www.burton.com/en-us/blogs/the-burton-blog/learn-to-snowboard'},
+ S02:{publisher:'Burton',title:'Goofy vs. Regular: The Official Guide to Snowboard Stances',url:'https://www.burton.com/en-us/blogs/the-burton-blog/goofy-vs-regular'},
+ S03:{publisher:'REI',title:'How to Put on Your Snowboard Boots and Bindings',url:'https://www.rei.com/learn/expert-advice/how-to-put-on-your-snowboard-boots-and-bindings.html'},
+ S04:{publisher:'REI',title:'How to Snowboard',url:'https://www.rei.com/learn/expert-advice/how-to-snowboard.html'},
+ S05:{publisher:'NSAA',title:'Your Responsibility Code (2022)',url:'https://www.nsaa.org/nsaa/safety/'},
+ S06:{publisher:'Burton',title:'A Beginner’s Guide on How to Set up a Snowboard',url:'https://www.burton.com/en-us/blogs/the-burton-blog/how-to-set-up-a-snowboard'}
+};
+const slides=[...document.querySelectorAll('.slide')];
+const nav=[...document.querySelectorAll('[data-jump]')];
+let current=0;
+const prev=document.getElementById('prevBtn'),next=document.getElementById('nextBtn');
+const dialog=document.getElementById('sourceDialog'),help=document.getElementById('helpDialog');
+function move(to){
+ const n=Math.min(slides.length-1,Math.max(0,to));
+ slides.forEach((el,i)=>{el.hidden=i!==n;el.classList.toggle('is-active',i===n);});
+ nav.forEach(el=>{const active=Number(el.dataset.jump)===n;el.classList.toggle('active',active);if(active){el.setAttribute('aria-current','step');}else{el.removeAttribute('aria-current');}});
+ current=n;prev.disabled=n===0;next.disabled=n===slides.length-1;
+ document.getElementById('pageNum').textContent=String(n+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
+ document.getElementById('sectionName').textContent=slides[n].dataset.title;
+ window.location.hash='p'+String(n+1).padStart(2,'0');
+ if(window.innerWidth<=650)window.scrollTo(0,0);
+}
+prev.addEventListener('click',()=>move(current-1));next.addEventListener('click',()=>move(current+1));
+nav.forEach(el=>el.addEventListener('click',()=>move(Number(el.dataset.jump))));
+function sourceMarkup(slide){
+ const ids=(slide?.dataset.sourceIds||Object.keys(sources).join(',')).split(',').map(x=>x.trim()).filter(Boolean);
+ return ids.map(id=>{
+ const s=sources[id];
+ return !s?`<div class="source-item">未知來源 ${id}</div>`:`<div class="source-item"><span class="source-id">${id}</span><b>${s.title}</b><p>${s.publisher} · 2026-11-13 查閱 · <a href="raw/${id}.md" target="_blank" rel="noopener">來源閱讀筆記</a></p><a href="${s.url}" target="_blank" rel="noopener noreferrer">開啟原始公開來源 ↗</a></div>`;
+ }).join('');
+}
+function showSources(all=false){document.getElementById('sourceContent').innerHTML=sourceMarkup(all?null:slides[current]);document.getElementById('sourceHeading').textContent=all?'六篇資料完整來源索引':'本頁來源：'+slides[current].dataset.title;dialog.showModal();}
+document.getElementById('sourceBtn').addEventListener('click',()=>showSources());document.getElementById('openSourcesSide').addEventListener('click',()=>showSources(true));document.getElementById('endSourceBtn').addEventListener('click',()=>showSources(true));document.getElementById('closeSources').addEventListener('click',()=>dialog.close());
+document.getElementById('helpBtn').addEventListener('click',()=>help.showModal());document.getElementById('closeHelp').addEventListener('click',()=>help.close());
+const stances={regular:{title:'Regular：左腳在前',desc:'左腳靠近板頭、右腳靠近板尾。這是站姿名稱，不代表比較正確。',x:'L',y:'R'},goofy:{title:'Goofy：右腳在前',desc:'右腳靠近板頭、左腳靠近板尾。只要平衡與控制合適，也是一樣正常的站姿。',x:'R',y:'L'}};
+document.querySelectorAll('[data-stance]').forEach(btn=>btn.addEventListener('click',()=>{
+ const choice=stances[btn.dataset.stance];
+ document.querySelectorAll('[data-stance]').forEach(b=>{let s=b===btn;b.classList.toggle('selected',s);b.setAttribute('aria-pressed',String(s));});
+ document.getElementById('stanceTitle').textContent=choice.title;document.getElementById('stanceDesc').textContent=choice.desc;
+ document.querySelector('#leftBinding text').textContent=choice.x;document.querySelector('#rightBinding text').textContent=choice.y;
+ document.getElementById('stanceSvg').setAttribute('aria-label',choice.title+' 的板形示意圖；雪板板頭位於左側。');
+}));
+const quiz={q1:{answer:'a',why:'Regular 是左腳在前；Goofy 是右腳在前。'},q2:{answer:'b',why:'落葉飄先練單刃控制、左右橫移與減速。'},q3:{answer:'c',why:'前方或下坡的人享有優先通行權，後方必須避讓。'}};
+const answered={};
+function updateScore(){const done=Object.keys(answered).length;const right=Object.entries(answered).filter(([k,v])=>quiz[k].answer===v).length;document.getElementById('quizScore').textContent=done===3?`完成測驗：答對 ${right} / 3 題`:`已回答 ${done} / 3 題`}
+document.querySelectorAll('.question').forEach(q=>{
+ q.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>{
+ const id=q.dataset.question;answered[id]=b.dataset.answer;
+ q.querySelectorAll('[data-answer]').forEach(other=>{let chosen=b===other;other.classList.toggle('chosen',chosen&&b.dataset.answer===quiz[id].answer);other.classList.toggle('wrong',chosen&&b.dataset.answer!==quiz[id].answer);other.setAttribute('aria-pressed',String(chosen));});
+ q.querySelector('.quiz-feedback').textContent=(b.dataset.answer===quiz[id].answer?'答對。':'再確認：')+quiz[id].why;
+ updateScore();
+ }));
+});
+document.getElementById('resetQuiz').addEventListener('click',()=>{Object.keys(answered).forEach(k=>delete answered[k]);document.querySelectorAll('.question').forEach(q=>{q.querySelector('.quiz-feedback').textContent='';q.querySelectorAll('[data-answer]').forEach(b=>{b.classList.remove('chosen','wrong');b.removeAttribute('aria-pressed');});});updateScore();});
+window.addEventListener('keydown',ev=>{
+ if(dialog.open||help.open||ev.altKey||ev.ctrlKey||ev.metaKey)return;
+ if(['BUTTON','INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)&&['ArrowLeft','ArrowRight','Home','End'].includes(ev.key))return;
+ if(ev.key==='ArrowLeft'){ev.preventDefault();move(current-1)}else if(ev.key==='ArrowRight'){ev.preventDefault();move(current+1)}else if(ev.key==='Home'){ev.preventDefault();move(0)}else if(ev.key==='End'){ev.preventDefault();move(slides.length-1)}
+});
+const match=location.hash.match(/^#p(\d{1,2})$/);move(match?Number(match[1])-1:0);
+})();
+</script>
+</body>
+</html>

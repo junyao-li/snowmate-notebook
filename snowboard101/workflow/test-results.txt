@@ -1,0 +1,19 @@
+PASS | 原始來源筆記至少 5 份（實際 6）
+PASS | HTML 12 頁（實際 12）
+PASS | 知識頁與索引存在（實際 8）
+PASS | 所有投影片都標記 Wiki 頁面
+PASS | 投影片對應 Wiki 檔案均存在
+PASS | 所有 HTML 來源代碼有效（未知：）
+PASS | 每份 ingest 至少被一頁簡報使用（未使用：）
+PASS | 簡報具備導覽、測驗及來源視窗程式
+PASS | Wiki 站內 Markdown 連結均有效
+PASS | Schema 與操作日誌存在
+PASS | HTML 沒有捏造公開網址
+PASS | 教學大綱頁數與 HTML 對應
+PASS | 每一頁 HTML 與預先整理的 Wiki/來源大綱一致
+PASS | 每頁都有教學標題
+PASS | 三題互動測驗、各有三個選項
+PASS | 教學 SVG 圖具有無障礙文字
+PASS | Node.js JavaScript 語法檢查通過
+
+RESULT: 0 failures

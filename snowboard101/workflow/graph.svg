@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="850" viewBox="0 0 1120 850" role="img" aria-labelledby="title desc">
+<title id="title">Snowboard 101 LLM Wiki 製作與檢查流程</title>
+<desc id="desc">資料蒐集、ingest、wiki 概念整理、來源檢查、查詢整理大綱、HTML 生成、測試，再根據錯誤回到相應節點重新執行。</desc>
+<rect width="1120" height="850" fill="#f8f7f1"/>
+<g font-family="Noto Sans CJK TC, sans-serif"><text x="80" y="73" font-size="35" fill="#183e44" font-weight="800">Snowboard 101 · Loop / Graph</text><text x="80" y="105" font-size="17" fill="#6c8181">先整理知識 → 檢查 → 產生教學 → 再測試</text>
+<rect x="340" y="142" width="440" height="63" rx="14" fill="#dcebe5" stroke="#75a99a"/><text x="560" y="183" font-weight="700" text-anchor="middle" font-size="19" fill="#1b5254">1. 搜集 6 篇資料 → raw/S01～S06</text>
+<path d="M560 205V235" stroke="#3e8580" stroke-width="4"/><path d="M550 226L560 239L570 226" fill="none" stroke="#3e8580" stroke-width="4"/>
+<rect x="340" y="239" width="440" height="63" rx="14" fill="#dcebe5" stroke="#75a99a"/><text x="560" y="279" font-weight="700" text-anchor="middle" font-size="19" fill="#1b5254">2. Ingest → 整理相互連結 Wiki</text>
+<path d="M560 302V332" stroke="#3e8580" stroke-width="4"/><path d="M550 323L560 336L570 323" fill="none" stroke="#3e8580" stroke-width="4"/>
+<rect x="340" y="336" width="440" height="63" rx="14" fill="#fff0dc" stroke="#dfab75"/><text x="560" y="376" font-weight="700" text-anchor="middle" font-size="19" fill="#855d35">3. Lint：概念 / 來源 / 連結一致？</text>
+<path d="M340 368H190V271H340" stroke="#da8159" fill="none" stroke-width="4" stroke-dasharray="8 7"/><path d="M326 263L343 271L326 279" fill="none" stroke="#da8159" stroke-width="4"/><text x="135" y="318" text-anchor="middle" font-size="17" fill="#b16d4b">錯誤：修正 Wiki</text>
+<path d="M560 399V429" stroke="#3e8580" stroke-width="4"/><path d="M550 420L560 433L570 420" fill="none" stroke="#3e8580" stroke-width="4"/>
+<rect x="340" y="433" width="440" height="63" rx="14" fill="#dcebe5" stroke="#75a99a"/><text x="560" y="472" font-weight="700" text-anchor="middle" font-size="19" fill="#1b5254">4. Query Wiki → 建立投影片來源清單</text>
+<path d="M560 496V526" stroke="#3e8580" stroke-width="4"/><path d="M550 517L560 530L570 517" fill="none" stroke="#3e8580" stroke-width="4"/>
+<rect x="340" y="530" width="440" height="63" rx="14" fill="#fff0dc" stroke="#dfab75"/><text x="560" y="569" font-weight="700" text-anchor="middle" font-size="19" fill="#855d35">5. 先檢查 slide-manifest 來源 ID</text>
+<path d="M780 562H918V464H780" stroke="#da8159" fill="none" stroke-width="4" stroke-dasharray="8 7"/><path d="M795 456L778 464L795 472" fill="none" stroke="#da8159" stroke-width="4"/><text x="952" y="521" font-size="16" fill="#b16d4b">錯誤：回到大綱</text>
+<path d="M560 593V622" stroke="#3e8580" stroke-width="4"/><path d="M550 614L560 627L570 614" fill="none" stroke="#3e8580" stroke-width="4"/>
+<rect x="340" y="627" width="440" height="63" rx="14" fill="#dcebe5" stroke="#75a99a"/><text x="560" y="667" font-weight="700" text-anchor="middle" font-size="19" fill="#1b5254">6. 產生 HTML → 測試 → 反思</text>
+<path d="M340 659H235V560H340" stroke="#da8159" fill="none" stroke-width="4" stroke-dasharray="8 7"/><path d="M326 552L343 560L326 568" fill="none" stroke="#da8159" stroke-width="4"/><text x="95" y="613" font-size="16" fill="#b16d4b">引用錯：回到來源表</text>
+<path d="M560 690V723" stroke="#3e8580" stroke-width="4"/><path d="M550 715L560 728L570 715" fill="none" stroke="#3e8580" stroke-width="4"/>
+<rect x="340" y="728" width="440" height="63" rx="14" fill="#183e44"/><text x="560" y="769" font-weight="700" text-anchor="middle" font-size="19" fill="#ffffff">7. GitHub Pages 公開（使用者部署）</text>
+<text x="80" y="824" font-size="14" fill="#81918b">Revision v2 · 2026-11-13 · 擷取來源 ID 錯誤後，將引用檢查前移至簡報大綱節點</text>
+</g></svg>
